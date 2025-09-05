@@ -1,328 +1,35 @@
-import React, { useMemo, useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
-import { Copy, Download, Plus, Trash2 } from "lucide-react";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+<h1 align="center">Hi 👋 N E X A 1337</h1>
+<h3 align="center">Building the Future with AI, Automation & Digital Growth</h3>
 
-function toList(val: string) {
-  return val
-    .split(",")
-    .map((s) => s.trim())
-    .filter(Boolean);
-}
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=nexa1337&label=Profile%20views&color=0e75b6&style=flat" alt="nexa1337" /> </p>
 
-function escapeMd(text: string) {
-  return text.replace(/[<>&]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" }[c]!));
-}
+<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=nexa1337" alt="nexa1337" /></a> </p>
 
-export default function READMEGenerator() {
-  const [username, setUsername] = useState("");
-  const [displayName, setDisplayName] = useState("");
-  const [tagline, setTagline] = useState("AI • Automation • Digital Growth");
-  const [about, setAbout] = useState("We build smart experiences with AI, automation, and clean design.");
-  const [location, setLocation] = useState("");
-  const [email, setEmail] = useState("");
-  const [website, setWebsite] = useState("");
-  const [linkedin, setLinkedin] = useState("");
-  const [twitter, setTwitter] = useState("");
-  const [instagram, setInstagram] = useState("");
-  const [youtube, setYoutube] = useState("");
-  const [skills, setSkills] = useState("JavaScript, TypeScript, React, Next.js, Node.js, Python, AI, Automation");
-  const [tools, setTools] = useState("Git, Docker, Postgres, Redis, AWS, Vercel");
-  const [theme, setTheme] = useState("tokyonight");
+<p align="left"> <a href="https://twitter.com/" target="blank"><img src="https://img.shields.io/twitter/follow/?logo=twitter&style=for-the-badge" alt="" /></a> </p>
 
-  const [showStats, setShowStats] = useState(true);
-  const [showTopLangs, setShowTopLangs] = useState(true);
-  const [showStreak, setShowStreak] = useState(true);
+- 🌱 I’m currently learning **CyberSecurity, Ai agent, Ai Automation**
 
-  type Project = { name: string; desc: string; link: string };
-  const [projects, setProjects] = useState<Project[]>([
-    { name: "NEXA Website", desc: "Agency site with modern UI and SEO-first content.", link: "https://nexa.example" },
-  ]);
+- 👨‍💻 All of my projects are available at [https://linktr.ee/nexa1337](https://linktr.ee/nexa1337)
 
-  const addProject = () => setProjects((p) => [...p, { name: "", desc: "", link: "" }]);
-  const removeProject = (idx: number) => setProjects((p) => p.filter((_, i) => i !== idx));
-  const updateProject = (idx: number, key: keyof Project, val: string) =>
-    setProjects((p) => p.map((it, i) => (i === idx ? { ...it, [key]: val } : it)));
+- 💬 Ask me about **Interior Design, Cybersecurity**
 
-  const badges = useMemo(() => {
-    const parts: string[] = [];
-    const skillList = toList(skills);
-    const toolList = toList(tools);
+- 📫 How to reach me **Support@nexa1337.com**
 
-    if (skillList.length) {
-      parts.push(`**Skills**: ${skillList.map((s) => `\`${escapeMd(s)}\``).join(" · ")}`);
-    }
-    if (toolList.length) {
-      parts.push(`**Tools**: ${toolList.map((s) => `\`${escapeMd(s)}\``).join(" · ")}`);
-    }
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://linkedin.com/in/https://www.linkedin.com/in/nexa1337" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/nexa1337" height="30" width="40" /></a>
+<a href="https://fb.com/https://www.facebook.com/nexa1337" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="https://www.facebook.com/nexa1337" height="30" width="40" /></a>
+<a href="https://instagram.com/https://www.instagram.com/nexa1337" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="https://www.instagram.com/nexa1337" height="30" width="40" /></a>
+</p>
 
-    return parts.join("\n\n");
-  }, [skills, tools]);
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> <a href="https://developer.android.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> </a> <a href="https://angular.io" target="_blank" rel="noreferrer"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40" height="40"/> </a> <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/> </a> <a href="https://azure.microsoft.com/en-in/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="40" height="40"/> </a> <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a> <a href="https://www.blender.org/" target="_blank" rel="noreferrer"> <img src="https://download.blender.org/branding/community/blender_community_badge_white.svg" alt="blender" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://dart.dev" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg" alt="dart" width="40" height="40"/> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> <a href="https://flutter.dev" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40"/> </a> <a href="https://cloud.google.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://ifttt.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/ifttt/ifttt-ar21.svg" alt="ifttt" width="40" height="40"/> </a> <a href="https://www.adobe.com/in/products/illustrator.html" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg" alt="illustrator" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://kotlinlang.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="kotlin" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> </a> <a href="https://www.php.net" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://sass-lang.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/> </a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a> <a href="https://unity.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg" alt="unity" width="40" height="40"/> </a> <a href="https://unrealengine.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/kenangundogan/fontisto/036b7eca71aab1bef8e6a0518f7329f13ed62f6b/icons/svg/brand/unreal-engine.svg" alt="unreal" width="40" height="40"/> </a> <a href="https://vuejs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="vuejs" width="40" height="40"/> </a> <a href="https://zapier.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg" alt="zapier" width="40" height="40"/> </a> </p>
 
-  const socials = useMemo(() => {
-    const items: string[] = [];
-    if (website) items.push(`[Website](${website})`);
-    if (linkedin) items.push(`[LinkedIn](${linkedin})`);
-    if (twitter) items.push(`[Twitter/X](${twitter})`);
-    if (instagram) items.push(`[Instagram](${instagram})`);
-    if (youtube) items.push(`[YouTube](${youtube})`);
-    if (email) items.push(`[Email](mailto:${email})`);
-    return items.join(" • ");
-  }, [website, linkedin, twitter, instagram, youtube, email]);
+<h3 align="left">Support:</h3>
+<p><a href="https://www.buymeacoffee.com/nexa1337"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="nexa1337" /></a></p><br><br>
 
-  const statsBlock = useMemo(() => {
-    if (!username) return "";
-    const lines: string[] = [];
-    if (showStats)
-      lines.push(
-        `![GitHub Stats](https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=${theme})`
-      );
-    if (showTopLangs)
-      lines.push(
-        `![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=${theme})`
-      );
-    if (showStreak)
-      lines.push(`![GitHub Streak](https://streak-stats.demolab.com?user=${username}&theme=${theme})`);
-    return lines.join("\n\n");
-  }, [username, theme, showStats, showTopLangs, showStreak]);
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=nexa1337&show_icons=true&locale=en&layout=compact" alt="nexa1337" /></p>
 
-  const projectBlock = useMemo(() => {
-    if (!projects.length) return "";
-    const rows = projects
-      .filter((p) => p.name || p.desc || p.link)
-      .map((p) => `- **${escapeMd(p.name || "Project")}** — ${escapeMd(p.desc || "" )} ${p.link ? `[Live](${p.link})` : ""}`);
-    return rows.length ? rows.join("\n") : "";
-  }, [projects]);
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=nexa1337&show_icons=true&locale=en" alt="nexa1337" /></p>
 
-  const markdown = useMemo(() => {
-    const title = displayName || username || "NEXA";
-
-    const lines: string[] = [];
-    lines.push(`# ${escapeMd(title)}`);
-    if (tagline) lines.push(`**${escapeMd(tagline)}**`);
-    lines.push("");
-
-    if (about) {
-      lines.push(about);
-      lines.push("");
-    }
-
-    if (socials) {
-      lines.push(socials);
-      lines.push("");
-    }
-
-    if (location) lines.push(`📍 ${escapeMd(location)}`);
-    if (badges) {
-      lines.push("");
-      lines.push(badges);
-    }
-
-    if (projectBlock) {
-      lines.push("\n## Featured Projects\n");
-      lines.push(projectBlock);
-    }
-
-    if (username && (showStats || showTopLangs || showStreak)) {
-      lines.push("\n## Stats\n");
-      lines.push(statsBlock);
-    }
-
-    lines.push("\n---\nMade with ❤️ by NEXA README Generator\n");
-
-    return lines.join("\n");
-  }, [displayName, username, tagline, about, socials, location, badges, projectBlock, statsBlock]);
-
-  const copyToClipboard = async () => {
-    await navigator.clipboard.writeText(markdown);
-  };
-
-  const downloadFile = () => {
-    const blob = new Blob([markdown], { type: "text/markdown;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "README.md";
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    URL.revokeObjectURL(url);
-  };
-
-  const pill = (text: string) => (
-    <Badge className="rounded-2xl px-3 py-1 text-xs font-medium">{text}</Badge>
-  );
-
-  return (
-    <div className="min-h-screen w-full bg-[#02050a] text-white p-6 md:p-10">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Left: Form */}
-        <Card className="bg-[#11151c] border-0 shadow-xl rounded-2xl">
-          <CardContent className="p-6 md:p-8 space-y-6">
-            <div className="flex items-center justify-between">
-              <h1 className="text-2xl md:text-3xl font-semibold tracking-tight">GitHub Profile README Generator</h1>
-              <div className="flex items-center gap-2">{pill("NEXA")}{pill("v1.0")}</div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <Label>GitHub Username *</Label>
-                <Input placeholder="e.g. nexa1337" value={username} onChange={(e) => setUsername(e.target.value)} />
-              </div>
-              <div>
-                <Label>Display Name</Label>
-                <Input placeholder="e.g. NEXA" value={displayName} onChange={(e) => setDisplayName(e.target.value)} />
-              </div>
-              <div className="md:col-span-2">
-                <Label>Tagline</Label>
-                <Input placeholder="e.g. AI • Automation • Digital Growth" value={tagline} onChange={(e) => setTagline(e.target.value)} />
-              </div>
-              <div className="md:col-span-2">
-                <Label>About</Label>
-                <Textarea rows={4} value={about} onChange={(e) => setAbout(e.target.value)} />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <Label>Location</Label>
-                <Input placeholder="e.g. Casablanca, MA" value={location} onChange={(e) => setLocation(e.target.value)} />
-              </div>
-              <div>
-                <Label>Email</Label>
-                <Input placeholder="e.g. hello@nexa.agency" value={email} onChange={(e) => setEmail(e.target.value)} />
-              </div>
-              <div>
-                <Label>Website</Label>
-                <Input placeholder="https://nexa.agency" value={website} onChange={(e) => setWebsite(e.target.value)} />
-              </div>
-              <div>
-                <Label>LinkedIn</Label>
-                <Input placeholder="https://linkedin.com/in/username" value={linkedin} onChange={(e) => setLinkedin(e.target.value)} />
-              </div>
-              <div>
-                <Label>Twitter/X</Label>
-                <Input placeholder="https://x.com/username" value={twitter} onChange={(e) => setTwitter(e.target.value)} />
-              </div>
-              <div>
-                <Label>Instagram</Label>
-                <Input placeholder="https://instagram.com/username" value={instagram} onChange={(e) => setInstagram(e.target.value)} />
-              </div>
-              <div>
-                <Label>YouTube</Label>
-                <Input placeholder="https://youtube.com/@channel" value={youtube} onChange={(e) => setYoutube(e.target.value)} />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <Label>Skills (comma-separated)</Label>
-                <Input value={skills} onChange={(e) => setSkills(e.target.value)} />
-              </div>
-              <div>
-                <Label>Tools (comma-separated)</Label>
-                <Input value={tools} onChange={(e) => setTools(e.target.value)} />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-              <div className="flex items-center gap-3">
-                <Switch checked={showStats} onCheckedChange={setShowStats} />
-                <Label>Include GitHub Stats</Label>
-              </div>
-              <div className="flex items-center gap-3">
-                <Switch checked={showTopLangs} onCheckedChange={setShowTopLangs} />
-                <Label>Include Top Languages</Label>
-              </div>
-              <div className="flex items-center gap-3">
-                <Switch checked={showStreak} onCheckedChange={setShowStreak} />
-                <Label>Include Streak</Label>
-              </div>
-              <div>
-                <Label>Stats Theme</Label>
-                <Select value={theme} onValueChange={setTheme}>
-                  <SelectTrigger className="bg-[#0b0f15] border-[#1a2230]">
-                    <SelectValue placeholder="Select theme" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-[#0b0f15] text-white border-[#1a2230]">
-                    {[
-                      "tokyonight",
-                      "radical",
-                      "dark",
-                      "dracula",
-                      "merko",
-                      "onedark",
-                      "gruvbox",
-                      "synthwave",
-                    ].map((t) => (
-                      <SelectItem key={t} value={t}>
-                        {t}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <h2 className="text-lg font-semibold">Featured Projects</h2>
-                <Button onClick={addProject} className="rounded-2xl" variant="secondary">
-                  <Plus className="w-4 h-4 mr-2" /> Add Project
-                </Button>
-              </div>
-              <div className="space-y-3">
-                {projects.map((p, idx) => (
-                  <div key={idx} className="grid grid-cols-1 md:grid-cols-12 gap-3 bg-[#0b0f15] rounded-2xl p-4 border border-[#1a2230]">
-                    <div className="md:col-span-3">
-                      <Label>Name</Label>
-                      <Input value={p.name} onChange={(e) => updateProject(idx, "name", e.target.value)} placeholder="Project name" />
-                    </div>
-                    <div className="md:col-span-6">
-                      <Label>Description</Label>
-                      <Input value={p.desc} onChange={(e) => updateProject(idx, "desc", e.target.value)} placeholder="Short description" />
-                    </div>
-                    <div className="md:col-span-3">
-                      <Label>Link</Label>
-                      <Input value={p.link} onChange={(e) => updateProject(idx, "link", e.target.value)} placeholder="https://..." />
-                    </div>
-                    <div className="md:col-span-12 flex justify-end">
-                      <Button variant="destructive" onClick={() => removeProject(idx)} className="rounded-2xl">
-                        <Trash2 className="w-4 h-4 mr-2" /> Remove
-                      </Button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="flex gap-3 pt-2">
-              <Button onClick={copyToClipboard} className="rounded-2xl"><Copy className="w-4 h-4 mr-2"/> Copy Markdown</Button>
-              <Button onClick={downloadFile} variant="secondary" className="rounded-2xl"><Download className="w-4 h-4 mr-2"/> Download README.md</Button>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Right: Preview */}
-        <Card className="bg-[#11151c] border-0 shadow-xl rounded-2xl">
-          <CardContent className="p-6 md:p-8 space-y-4">
-            <h2 className="text-xl font-semibold">Live Preview</h2>
-            <div className="rounded-2xl border border-[#1a2230] bg-[#0b0f15] p-4 max-h-[70vh] overflow-auto prose prose-invert prose-pre:bg-[#0b0f15]">
-              <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
-            </div>
-            <h2 className="text-xl font-semibold">Raw Markdown</h2>
-            <Textarea className="font-mono text-sm min-h-[220px]" value={markdown} readOnly />
-          </CardContent>
-        </Card>
-      </div>
-    </div>
-  );
-}
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=nexa1337&" alt="nexa1337" /></p>
