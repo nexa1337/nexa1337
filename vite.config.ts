@@ -6,7 +6,7 @@ import { defineConfig, loadEnv } from 'vite';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
-    base: '/nexa1337/', // ← مهم! بدل 'nexa1337' بالrepo name ديالك
+    base: '/', // ← مهم! بدل 'nexa1337' بالrepo name ديالك
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
