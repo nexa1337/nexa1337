@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowUpRight, X, ChevronDown, Check } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 interface Project {
   id: number;
@@ -113,6 +114,48 @@ const projects: Project[] = [
     },
   },
   {
+    id: 9,
+    title: "Premium EScooter WordPress Theme",
+    category: "Web Development",
+    description: "A modern, high-performance WordPress theme designed specifically for e-scooter rentals, sales, and urban mobility startups.",
+    image: "https://drive.google.com/thumbnail?id=1ziaLniXS4-Gp6Bva7iKlwT7o8jEe-DQs&sz=w1920",
+    popupData: {
+      images: [
+        "https://drive.google.com/thumbnail?id=1ziaLniXS4-Gp6Bva7iKlwT7o8jEe-DQs&sz=w1920",
+        "https://drive.google.com/thumbnail?id=11IiyyclI_l0-cfCfiLtoj6AM58PFDass&sz=w1920",
+        "https://drive.google.com/thumbnail?id=10AMJPS8kx4FVO8SbhGfeztGNo4SxKdqH&sz=w1920"
+      ],
+      client: "E-Scooter Rentals, Mobility Startups",
+      sales: "30+",
+      delivery: "1-2 weeks",
+      revisions: "2",
+      included: ["Theme Installation", "Booking System Setup", "Responsive Design"],
+      technologies: "WordPress, WooCommerce",
+      fullDescription: "A modern, high-performance WordPress theme designed specifically for e-scooter rentals, sales, and urban mobility startups. Features include WooCommerce integration, booking systems, and a sleek, mobile-first design.",
+    },
+  },
+  {
+    id: 10,
+    title: "Premium Motorcycle Rental WordPress Theme",
+    category: "Web Development",
+    description: "An advanced WordPress theme tailored for motorcycle rental businesses and dealerships with integrated booking engine.",
+    image: "https://drive.google.com/thumbnail?id=1BFCppz5qf7MuLHYToXWgLinWEHyZYwbz&sz=w1920",
+    popupData: {
+      images: [
+        "https://drive.google.com/thumbnail?id=1BFCppz5qf7MuLHYToXWgLinWEHyZYwbz&sz=w1920",
+        "https://drive.google.com/thumbnail?id=1dyWqdvdHdC2bGz5Lc0kIYE8ibxeKvBBZ&sz=w1920",
+        "https://drive.google.com/thumbnail?id=1pBdHdZ_X_wXIqYeU2n6adTBwwZaSmlM1&sz=w1920"
+      ],
+      client: "Motorcycle Rentals, Dealerships",
+      sales: "45+",
+      delivery: "1-2 weeks",
+      revisions: "2",
+      included: ["Theme Setup", "Fleet Management", "Online Booking"],
+      technologies: "WordPress, PHP",
+      fullDescription: "An advanced WordPress theme tailored for motorcycle rental businesses and dealerships. It includes an integrated booking engine, fleet management, and a bold, responsive layout.",
+    },
+  },
+  {
     id: 5,
     title: "Premium Social Media Branding",
     category: "Branding",
@@ -212,6 +255,8 @@ export function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [isIncludedOpen, setIsIncludedOpen] = useState(false);
+  const location = useLocation();
+  const isProjectsPage = location.pathname === "/projects";
 
   const filteredProjects = projects.filter((project) => {
     if (filter === "all") return true;
@@ -220,6 +265,8 @@ export function Projects() {
     if (filter === "ai") return project.category === "AI Solutions";
     return true;
   });
+
+  const displayedProjects = isProjectsPage ? filteredProjects : filteredProjects.slice(0, 8);
 
   const openProject = (project: Project) => {
     setSelectedProject(project);
@@ -278,7 +325,7 @@ export function Projects() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((project) => (
+            {displayedProjects.map((project) => (
               <motion.div
                 layout
                 key={project.id}
@@ -292,7 +339,7 @@ export function Projects() {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover object-top w-full h-full transition-transform duration-500 group-hover:scale-110"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -320,11 +367,13 @@ export function Projects() {
           </AnimatePresence>
         </div>
 
-        <div className="mt-12 text-center">
-          <button className="bg-primary text-primary-foreground px-8 py-3 rounded-md font-medium hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all">
-            View All Projects
-          </button>
-        </div>
+        {!isProjectsPage && filteredProjects.length > 8 && (
+          <div className="mt-12 text-center">
+            <Link to="/projects" className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-md font-medium hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all">
+              View All Projects
+            </Link>
+          </div>
+        )}
       </div>
 
       {/* Project Popup */}
