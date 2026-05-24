@@ -7,18 +7,17 @@ import { ThemeProvider } from "./components/ThemeProvider";
 import { Navbar } from "./components/Navbar";
 import { BottomNavbar } from "./components/BottomNavbar";
 import { Footer } from "./components/Footer";
-import { HashRouter as Router, Routes, Route } from "react-router-dom"; // ✅ استخدمنا HashRouter
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
-import { Projects } from "./components/Projects";
+import { Projects } from "./components/Projects"; // Reuse component for now, or move to pages if needed
 import { PricingPage } from "./pages/PricingPage";
 import { Terms } from "./pages/Terms";
 import { Privacy } from "./pages/Privacy";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-// ScrollToTop يضمن أن أي تغيير فـ route يرجع الصفحة لـ top
 function ScrollToTop() {
   const { pathname } = useLocation();
 

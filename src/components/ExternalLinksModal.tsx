@@ -10,10 +10,11 @@ interface ExternalLinksModalProps {
 export function ExternalLinksModal({ isOpen, onClose }: ExternalLinksModalProps) {
   const links = [
     { name: "N E X A 1337", url: "https://nexa1337.github.io/nexa1337", clicks: "42.8k" },
-    { name: "N E X A 1337 - Portfolio", url: "https://nexa1337.github.io/Owner", clicks: "34.2k" },
-    { name: "N E X A 1337 - Digital Store", url: "https://nexa1337.github.io/digitalstore", clicks: "28.4k" },
+    { name: "N E X A 1337 - SecretArea", url: "https://nexa1337.github.io/secretarea/", clicks: "34.2k" },
+    { name: "N E X A 1337 - Digital Store", url: "https://digitalstore-iota-five.vercel.app/", clicks: "28.4k" },
     { name: "N E X A 1337 - Tool", url: "https://nexa1337.github.io/tool", clicks: "15.9k" },
     { name: "N E X A 1337 - Tool V2", url: "https://nexa1337.github.io/toolv2", clicks: "11.2k" },
+    { name: "N E X A 1337 - school", url: "https://school-lime-psi.vercel.app", clicks: "19.5k" },
   ];
 
   return (

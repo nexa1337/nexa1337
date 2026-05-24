@@ -33,10 +33,19 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto leading-relaxed"
           >
             N E X A 1337 scales businesses with web development, automation, and
             growth marketing that convert, fast, reliable, and global.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className="text-sm uppercase tracking-[0.2em] text-foreground/50 font-semibold mb-10"
+          >
+            N E X A 1337 &bull; Internet For Everyone
           </motion.p>
 
           <motion.div

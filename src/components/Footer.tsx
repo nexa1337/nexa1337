@@ -125,7 +125,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border/40 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} NEXA1337. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} N E X A 1337. All rights reserved.</p>
         </div>
       </div>
       <ExternalLinksModal isOpen={isLinksModalOpen} onClose={() => setIsLinksModalOpen(false)} />
